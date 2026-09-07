@@ -12,11 +12,11 @@ function Particles({ count = 2000 }) {
     const sizes = new Float32Array(count);
 
     const colorPalette = [
-      new THREE.Color('#2f3b4d'),
-      new THREE.Color('#ff5c35'),
-      new THREE.Color('#a7adb8'),
-      new THREE.Color('#5f6672'),
-      new THREE.Color('#2f3b4d'),
+      new THREE.Color('#8b5cf6'),
+      new THREE.Color('#06b6d4'),
+      new THREE.Color('#f43f5e'),
+      new THREE.Color('#6366f1'),
+      new THREE.Color('#a855f7'),
     ];
 
     for (let i = 0; i < count; i++) {
@@ -152,8 +152,8 @@ export default function ParticleField() {
         style={{ background: 'transparent' }}
       >
         <ambientLight intensity={0.3} />
-        <pointLight position={[10, 10, 10]} intensity={0.5} color="#ff5c35" />
-        <pointLight position={[-10, -10, -10]} intensity={0.3} color="#2f3b4d" />
+        <pointLight position={[10, 10, 10]} intensity={0.5} color="#8b5cf6" />
+        <pointLight position={[-10, -10, -10]} intensity={0.3} color="#06b6d4" />
 
         <Particles count={1500} />
 
