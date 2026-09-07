@@ -9,8 +9,13 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const handlePointerMove = (event) => {
+    document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
+    document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
+  };
+
   return (
-    <div className="app">
+    <div className="app" onPointerMove={handlePointerMove}>
       <ParticleField />
       <Navbar />
       <main className="main-content">

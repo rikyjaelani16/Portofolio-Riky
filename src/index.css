@@ -28,6 +28,8 @@
   --accent-gradient: linear-gradient(135deg, #8b5cf6, #06b6d4);
   --accent-gradient-warm: linear-gradient(135deg, #f43f5e, #f97316);
   --accent-gradient-cool: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  --pointer-x: 50vw;
+  --pointer-y: 35vh;
 
   --border-color: rgba(255, 255, 255, 0.06);
   --border-color-hover: rgba(139, 92, 246, 0.3);
@@ -64,6 +66,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
+  background: var(--bg-primary);
   scrollbar-color: var(--accent-primary) var(--bg-secondary);
 }
 
