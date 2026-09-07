@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './Hero.css';
+import { MagneticLink, SpotlightCard } from './ReactBits';
 
 export default function Hero() {
     const heroRef = useRef(null);
@@ -43,18 +44,18 @@ export default function Hero() {
                 </p>
 
                 <div className="hero__actions">
-                    <a href="#projects" className="btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                    <MagneticLink href="#projects" className="btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); }}>
                         <span>View My Work</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </MagneticLink>
                     <a href="#contact" className="btn-outline" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                         <span>Get In Touch</span>
                     </a>
                 </div>
 
-                <div className="hero__stats">
+                <SpotlightCard className="hero__stats">
                     <div className="hero__stat">
                         <span className="hero__stat-number">2+</span>
                         <span className="hero__stat-label">Years Experience</span>
@@ -69,7 +70,7 @@ export default function Hero() {
                         <span className="hero__stat-number">10+</span>
                         <span className="hero__stat-label">Happy Clients</span>
                     </div>
-                </div>
+                </SpotlightCard>
             </div>
 
             <div className="hero__scroll-indicator">

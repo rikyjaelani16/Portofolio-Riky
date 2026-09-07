@@ -118,6 +118,43 @@ button:focus-visible {
   }
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease var(--reveal-delay, 0ms), transform 700ms cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.spotlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(220px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), rgba(255,255,255,.12), transparent 68%);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.spotlight-card:hover::after { opacity: 1; }
+
+.magnetic-link { transition: transform 180ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+  .magnetic-link { transform: none !important; }
+}
+
 @media (max-width: 720px) {
   :root {
     --section-padding: 88px 0;

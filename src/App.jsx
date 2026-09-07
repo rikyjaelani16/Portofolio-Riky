@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
+import { Reveal } from './components/ReactBits';
 
 function App() {
   const handlePointerMove = (event) => {
@@ -19,11 +20,11 @@ function App() {
       <ParticleField />
       <Navbar />
       <main className="main-content">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Reveal><Hero /></Reveal>
+        <Reveal delay={80}><About /></Reveal>
+        <Reveal delay={140}><Skills /></Reveal>
+        <Reveal delay={200}><Projects /></Reveal>
+        <Reveal delay={260}><Contact /></Reveal>
       </main>
       <Footer />
     </div>
